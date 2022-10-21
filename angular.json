@@ -11,7 +11,7 @@
           "inlineStyle": false,
           "skipTests": true
         },
-        "@schematics/angular:class": {
+        "@schematics/angular:class": { 
           "skipTests": true
         },
         "@schematics/angular:directive": {
