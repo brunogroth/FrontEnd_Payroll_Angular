@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FrontEnd_Payroll": {
+    "FRONT_Folhas": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -11,7 +11,7 @@
           "inlineStyle": false,
           "skipTests": true
         },
-        "@schematics/angular:class": { 
+        "@schematics/angular:class": {
           "skipTests": true
         },
         "@schematics/angular:directive": {
@@ -31,6 +31,9 @@
         },
         "@schematics/angular:service": {
           "skipTests": true
+        },
+        "@schematics/angular:application": {
+          "strict": true
         }
       },
       "root": "",
@@ -40,7 +43,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/front-end-payroll",
+            "outputPath": "dist/front-folhas",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -91,10 +94,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "FrontEnd_Payroll:build:production"
+              "browserTarget": "FRONT_Folhas:build:production"
             },
             "development": {
-              "browserTarget": "FrontEnd_Payroll:build:development"
+              "browserTarget": "FRONT_Folhas:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -102,13 +105,11 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FrontEnd_Payroll:build"
+            "browserTarget": "FRONT_Folhas:build"
           }
         }
       }
     }
   },
-  "cli": {
-    "analytics": false
-  }
+  "defaultProject": "FRONT_Folhas"
 }
