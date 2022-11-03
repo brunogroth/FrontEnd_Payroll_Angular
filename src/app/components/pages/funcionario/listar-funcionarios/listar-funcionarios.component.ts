@@ -10,17 +10,18 @@ import { Funcionario } from 'src/app/models/funcionario';
   styleUrls: ['./listar-funcionarios.component.css']
 })
 export class ListarFuncionariosComponent implements OnInit {
-
+  funcionarios!: Funcionario[];
+  
   constructor(private http : HttpClient) { }
 
   ngOnInit(): void {
 
     //Configurando a requisição para a API    
-    this.http.get<Funcionario>("https://localhost:7277/api/Employee/list")
+    this.http.get<Funcionario[]>("https://localhost:7277/api/Employee/list")
     //Executar a requisição
     .subscribe({
       next : (funcionarios) => {
-        console.table(funcionarios)//Caso a requisição for bem sucedida
+        this.funcionarios = funcionarios;
       }
     });
   }
