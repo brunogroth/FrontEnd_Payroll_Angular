@@ -1,5 +1,5 @@
 export interface Funcionario{
-    funcionarioId? : number;
+    id? : number;
     name : string;
     cpf : string;
     email : string;

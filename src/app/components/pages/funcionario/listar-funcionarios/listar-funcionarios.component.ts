@@ -25,4 +25,15 @@ export class ListarFuncionariosComponent implements OnInit {
       }
     });
   }
+
+  remover(id: number): void{
+    console.log(`Id: ${id}`);
+    this.http.delete<Funcionario>("https://localhost:7277/api/Employee/delete/"+id)
+    //Executar a requisição
+    .subscribe({
+      next : (funcionario) => {
+        this.ngOnInit();
+      }
+    });
+  }
 }

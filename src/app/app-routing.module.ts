@@ -5,6 +5,10 @@ import { ListarFuncionariosComponent } from './components/pages/funcionario/list
 
 const routes: Routes = [
   {
+    path: "pages/funcionario/cadastrar/:id/:cpf",
+    component: CadastrarFuncionarioComponent
+  },
+  {
     path: "pages/funcionario/cadastrar",
     component: CadastrarFuncionarioComponent
   },

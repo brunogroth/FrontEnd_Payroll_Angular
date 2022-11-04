@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
+import { ActivatedRoute, Route, Router } from "@angular/router";
 import { ClientRequest } from "http";
 import { Funcionario } from "src/app/models/funcionario";
 
@@ -13,11 +13,22 @@ export class CadastrarFuncionarioComponent implements OnInit {
   nome: string = "";
   cpf: string = "";
   errormessage!: string;
+  id!:number;
 
   constructor(private http : HttpClient,
-    private router: Router) {}
+    private router: Router,
+    private url: ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.url.params.subscribe({
+      next: (params) => {
+        let { id, cpf } = params;
+        console.log(id);
+        
+        this.id = id; // consigo jogar esse id na view
+      }
+    })
+  }
 
   cadastrar(): void {
     let funcionario : Funcionario = {
