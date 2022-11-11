@@ -1,10 +1,19 @@
 # FRONTFolhas
 
+Front End App for <a href="https://github.com/brunogroth/WebAPIPayrollCSharp">Payroll</a> project made at college.
+
+This Angular application makes requests in ASP.NET Core WebAPI. 
+
+## Enviroment Configuration
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+Please clone also the <a href="https://github.com/brunogroth/WebAPIPayrollCSharp"> Backend </a> repository and run it in parallel, so the HTTP Request's can be received and handled correctly.
+The ASP.NET Core API already has all the necessary CORS policies to receive, proccess and return the HTTP Requests (GET, POST, PUT, DELETE). 
 
 ## Code scaffolding
 

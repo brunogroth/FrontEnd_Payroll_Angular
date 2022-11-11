@@ -26,6 +26,9 @@ export class ListarFuncionariosComponent implements OnInit {
     });
   }
 
+  // desestruturar atributo de objeto e transformar em variavel
+  // let {email} = funcionario; // pega o atributo email do objeto
+
   remover(id: number): void{
     console.log(`Id: ${id}`);
     this.http.delete<Funcionario>("https://localhost:7277/api/Employee/delete/"+id)

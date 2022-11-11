@@ -1,7 +1,15 @@
-<a routerLink="/pages/funcionario/cadastrar">Cadastrar Funcionário</a>
-<br>
-<a routerLink="/pages/funcionario/listar">Listar Funcionários</a>
+<div class="ml-4">
+    <div class="col mt-4">
+        <h1>Sistema de Funcionários</h1>
+    </div>
 
-<router-outlet>
-    <!-- É aqui que os componentes vão entrar -->
-</router-outlet>
+    <div class="row mt-4 ml-2">
+        <a routerLink="/pages/funcionario/cadastrar" class="btn btn-primary px-5 mx-3 my-1">Cadastrar Funcionário</a>
+        <a routerLink="/pages/funcionario/listar" class="btn btn-primary px-5 mx-3 my-1">Listar Funcionários</a>
+        <a routerLink="/pages/folha/cadastrar" class="btn btn-primary px-5 mx-3 my-1">Cadastrar Folha</a>
+    </div>
+
+    <router-outlet>
+        <!-- É aqui que os componentes vão entrar -->
+    </router-outlet>
+</div>

@@ -1,0 +1,28 @@
+<h2>Cadastrar Folha</h2>
+
+<div id="valorHora">
+    <label for="txtValorHora" class="label-group">Valor Hora </label><br>
+    <input type="number" id="txtValorHora" [(ngModel)]="valorHora" />
+</div>
+<div id="quantidadeHoras" class="my-3">
+    <label for="txtQuantidadeHoras" class="label-group">Quantidade de Horas Trabalhadas </label><br>
+    <input type="number" id="txtQuantidadeHoras" [(ngModel)]="quantidadeHoras" />
+</div>
+<div id="data" class="my-3">
+    <label for="txtData" class="label-group">Quantidade de Horas Trabalhadas </label><br>
+    <input type="date" id="txtData" [(ngModel)]="data" />
+</div>
+<div id="funcionarios" class="my-3">
+    <label for="txtFuncionarios" class="label-group">Funcionários</label><br>
+    <select name="" class="" [(ngModel)]="funcionarioId">
+        <option *ngFor="let funcionario of funcionarios" value={{funcionario.id}}>{{funcionario.name}}</option>
+    </select>
+
+</div>
+<div id="botao">
+    <button id="btnCadastrar" (click)="cadastrar()" class="btn btn-success">Cadastrar</button>
+</div>
+
+<div>
+    <h3 class="error">{{ errormessage }}</h3>
+</div>

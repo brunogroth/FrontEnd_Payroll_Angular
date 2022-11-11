@@ -1,4 +1,4 @@
-<h1>Listar Funcionários</h1>
+<h2>Listar Funcionários</h2>
 <div class="container ml-5 mr-5">
 <table class="table table-striped">
     <thead>
@@ -16,7 +16,7 @@
         <td scope="col">{{funcionario.email}}</td>
         <td scope="col">{{funcionario.wage}}</td>
         <td scope="col">{{funcionario.birth}}</td>
-        <td scope="col"><a routerLink="/pages/funcionario/cadastrar/{{funcionario.id}}">Alterar</a></td>
+        <td scope="col"><a class="btn  btn-warning" routerLink="/pages/funcionario/cadastrar/{{funcionario.id}}">Alterar</a></td>
         <td><button class="btn btn-danger" (click)="remover(funcionario.id!)">Remover</button></td>
     </tr>
 </table>

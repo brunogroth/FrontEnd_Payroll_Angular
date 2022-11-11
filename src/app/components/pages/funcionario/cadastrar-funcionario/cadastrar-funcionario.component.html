@@ -1,15 +1,17 @@
-<h2>Cadastrar Funcionário</h2>
+<h2 *ngIf="!id">Cadastrar Funcionário</h2>
+<h2 *ngIf="id">Editar Funcionário</h2>
 
 <div id="nome">
   <label for="txtNome">Nome</label>
-  <input type="text" id="txtNome" [(ngModel)]="nome" />
+  <input type="text" id="txtNome" [(ngModel)]="nome"/>
 </div>
 <div id="cpf">
   <label for="txtCpf">CPF</label>
   <input type="text" id="txtCpf" [(ngModel)]="cpf" />
 </div>
 <div id="botao">
-  <button id="btnCadastrar" (click)="cadastrar()">Cadastrar</button>
+  <button *ngIf="!id" id="btnCadastrar" (click)="cadastrar()">Cadastrar</button>
+  <button *ngIf="id" id="btnCadastrar" (click)="alterar()">Salvar</button>
 </div>
 
 <div>
